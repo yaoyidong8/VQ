@@ -51,7 +51,7 @@ def notify(title, message):
 
     log.info("准备推送通知...")
     urlencode = urllib.parse.urlencode
-    url = 'https://sctapi.ftqq.com/{}.send?{}&{}'.format(CONFIG.SCKEY, urlencode({'title': title}), urlencode({'desp': message}))
+    url = 'http://www.pushplus.plus/{}.send?{}&{}'.format(CONFIG.SCKEY, urlencode({'title': title}), urlencode({'desp': message}))
 
     try:
         response = to_python(requests.post(url).text)
